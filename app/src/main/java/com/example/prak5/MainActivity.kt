@@ -25,7 +25,7 @@ class MainActivity : ComponentActivity() {
             Prak5Theme {
                 Scaffold(
                     modifier = Modifier.fillMaxSize()
-                ) { innerPadding ->
+                ){ innerPadding ->
                     BiodataScreen(
                         innerPadding = innerPadding
                     )
