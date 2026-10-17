@@ -86,4 +86,9 @@ fun BiodataScreen(
     val pesanRequired = stringResource(R.string.error_required)
     val judulHasil = stringResource(R.string.result_title)
 
+    val labelAndroid = stringResource(R.string.skill_android)
+    val labelUiux = stringResource(R.string.skill_uiux)
+    val labelWeb = stringResource(R.string.skill_web)
+
+
 }
