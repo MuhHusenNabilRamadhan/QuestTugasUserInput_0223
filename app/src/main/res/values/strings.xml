@@ -32,5 +32,15 @@
         <item>@string/experience_advanced</item>
     </string-array>
 
+    <string name="error_required">Mohon lengkapi seluruh biodata dan pilih minimal satu skill.</string>
+    <string name="error_email">Format email tidak valid.</string>
 
+    <string name="result_title">Data Biodata</string>
+    <string name="result_name">Nama: %1$s %2$s</string>
+    <string name="result_email">Email: %1$s</string>
+    <string name="result_birth_date">Tanggal lahir: %1$s</string>
+    <string name="result_experience">Experience: %1$s</string>
+    <string name="result_skills">Skill: %1$s</string>
+
+    <string name="header_height_fraction">0.48</string>
 </resources>
