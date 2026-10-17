@@ -365,4 +365,74 @@ fun BiodataScreen(
                 )
             )
 
+            Button(
+                onClick = {
+                    val pesan = when {
+                        email.isNotBlank() && !emailValid ->
+                            pesanEmail
+
+                        !formValid ->
+                            pesanRequired
+
+                        else -> listOf(
+                            judulHasil,
+                            hasilNama,
+                            hasilEmail,
+                            hasilTanggal,
+                            hasilPengalaman,
+                            hasilSkill
+                        ).joinToString(" | ")
+                    }
+
+                    scope.launch {
+                        snackbarHost.currentSnackbarData?.dismiss()
+
+                        val job = launch {
+                            snackbarHost.showSnackbar(
+                                message = pesan,
+                                duration = SnackbarDuration.Indefinite
+                            )
+                        }
+
+                        delay(5000)
+                        snackbarHost.currentSnackbarData?.dismiss()
+                        job.cancel()
+                    }
+                },
+                enabled = formValid,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(
+                        dimensionResource(R.dimen.button_height)
+                    ),
+                shape = RoundedCornerShape(
+                    dimensionResource(R.dimen.input_corner)
+                ),
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = ungu,
+                    disabledContainerColor = nonaktif,
+                    disabledContentColor = colorResource(
+                        R.color.biodata_disabled_text
+                    )
+                )
+            ) {
+                Text(stringResource(R.string.proceed))
+            }
+
+            Spacer(
+                Modifier.height(
+                    dimensionResource(R.dimen.card_bottom_spacing)
+                )
+            )
+        }
+
+        SnackbarHost(
+            hostState = snackbarHost,
+            modifier = Modifier
+                .align(Alignment.BottomCenter)
+                .padding(dimensionResource(R.dimen.padding_small))
+        )
+    }
+
+    
 }
