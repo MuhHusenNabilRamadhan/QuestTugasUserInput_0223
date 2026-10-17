@@ -63,5 +63,17 @@ fun BiodataScreen(
         }.format(Date(millis))
     }.orEmpty()
 
+    val emailValid = email.isNotBlank() &&
+            AndroidPatterns.EMAIL_ADDRESS
+                .matcher(email.trim())
+                .matches()
+
+    val formValid = namaDepan.isNotBlank() &&
+            namaBelakang.isNotBlank() &&
+            emailValid &&
+            tanggalLahir != null &&
+            pengalaman.isNotBlank() &&
+            (skillAndroid || skillUiux || skillWeb)
+
     
 }
