@@ -324,5 +324,45 @@ fun BiodataScreen(
                 )
             )
 
-            
+            Text(
+                text = stringResource(R.string.select_skill),
+                modifier = Modifier.fillMaxWidth(),
+                color = teks,
+                fontSize = dimensionResource(
+                    R.dimen.label_text_size
+                ).value.sp,
+                fontWeight = FontWeight.Bold
+            )
+
+            // Pilihan skill sejajar.
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween,
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                ItemSkill(
+                    label = labelAndroid,
+                    checked = skillAndroid,
+                    onCheckedChange = { skillAndroid = it }
+                )
+
+                ItemSkill(
+                    label = labelUiux,
+                    checked = skillUiux,
+                    onCheckedChange = { skillUiux = it }
+                )
+
+                ItemSkill(
+                    label = labelWeb,
+                    checked = skillWeb,
+                    onCheckedChange = { skillWeb = it }
+                )
+            }
+
+            Spacer(
+                Modifier.height(
+                    dimensionResource(R.dimen.section_spacing)
+                )
+            )
+
 }
