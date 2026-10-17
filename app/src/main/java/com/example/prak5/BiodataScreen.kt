@@ -47,5 +47,21 @@ fun BiodataScreen(
     var tanggalLahir by remember { mutableStateOf<Long?>(null) }
     var pengalaman by remember { mutableStateOf("") }
 
-   
+    var pilihTanggal by remember { mutableStateOf(false) }
+    var bukaDropdown by remember { mutableStateOf(false) }
+
+    var skillAndroid by remember { mutableStateOf(false) }
+    var skillUiux by remember { mutableStateOf(false) }
+    var skillWeb by remember { mutableStateOf(false) }
+
+    val pilihanPengalaman =
+        stringArrayResource(R.array.experience_options)
+
+    val tanggalTampil = tanggalLahir?.let { millis ->
+        SimpleDateFormat("dd/MM/yyyy", Locale.getDefault()).apply {
+            timeZone = TimeZone.getTimeZone("UTC")
+        }.format(Date(millis))
+    }.orEmpty()
+
+    
 }
