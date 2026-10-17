@@ -139,5 +139,29 @@ fun BiodataScreen(
                 .align(Alignment.TopCenter)
         )
 
-        
+        // Kartu putih mengambang dan menimpa gambar.
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .fillMaxHeight()
+                .padding(
+                    top = tinggiGambar -
+                            dimensionResource(R.dimen.card_overlap)
+                )
+                .clip(
+                    RoundedCornerShape(
+                        topStart = dimensionResource(
+                            R.dimen.card_top_radius
+                        ),
+                        topEnd = dimensionResource(
+                            R.dimen.card_top_radius
+                        )
+                    )
+                )
+                .background(Color.White)
+                .verticalScroll(rememberScrollState())
+                .padding(dimensionResource(R.dimen.card_padding)),
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            
 }
