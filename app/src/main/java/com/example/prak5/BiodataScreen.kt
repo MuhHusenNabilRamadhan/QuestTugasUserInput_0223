@@ -229,5 +229,17 @@ fun BiodataScreen(
                 modifier = Modifier.fillMaxWidth()
             )
 
-            
+            Spacer(
+                Modifier.height(
+                    dimensionResource(R.dimen.input_spacing)
+                )
+            )
+
+            // Tanggal lahir dan experience dalam satu baris.
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.spacedBy(
+                    dimensionResource(R.dimen.input_spacing)
+                )
+            ) 
 }
