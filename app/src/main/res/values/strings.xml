@@ -12,5 +12,19 @@
     <string name="experience">Experience</string>
     <string name="select_skill">Pilih Skill Anda :</string>
 
-    
+    <string name="skill_android">Android</string>
+    <string name="skill_uiux">UI/UX</string>
+    <string name="skill_web">Web</string>
+
+    <string name="proceed">Proceed</string>
+    <string name="select_date">Pilih Tanggal Lahir</string>
+    <string name="select_experience">Pilih Experience</string>
+    <string name="confirm">Pilih</string>
+    <string name="cancel">Batal</string>
+
+    <string name="experience_beginner">Beginner</string>
+    <string name="experience_intermediate">Intermediate</string>
+    <string name="experience_advanced">Advanced</string>
+
+
 </resources>
