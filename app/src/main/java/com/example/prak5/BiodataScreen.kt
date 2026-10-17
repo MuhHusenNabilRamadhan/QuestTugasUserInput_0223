@@ -434,5 +434,36 @@ fun BiodataScreen(
         )
     }
 
-    
+    // Dialog kalender.
+    if (pilihTanggal) {
+        val dateState = rememberDatePickerState(
+            initialSelectedDateMillis = tanggalLahir
+        )
+
+        DatePickerDialog(
+            onDismissRequest = { pilihTanggal = false },
+            confirmButton = {
+                TextButton(
+                    onClick = {
+                        tanggalLahir = dateState.selectedDateMillis
+                        pilihTanggal = false
+                    }
+                ) {
+                    Text(stringResource(R.string.confirm))
+                }
+            },
+            dismissButton = {
+                TextButton(
+                    onClick = { pilihTanggal = false }
+                ) {
+                    Text(stringResource(R.string.cancel))
+                }
+            }
+        ) {
+            DatePicker(state = dateState)
+        }
+    }
+}
+
+
 }
