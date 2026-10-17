@@ -75,5 +75,11 @@ fun BiodataScreen(
             pengalaman.isNotBlank() &&
             (skillAndroid || skillUiux || skillWeb)
 
+    val ungu = colorResource(R.color.biodata_purple)
+    val teks = colorResource(R.color.biodata_text)
+    val garis = colorResource(R.color.biodata_input_border)
+    val latar = colorResource(R.color.biodata_background)
+    val nonaktif = colorResource(R.color.biodata_disabled)
+
     
 }
