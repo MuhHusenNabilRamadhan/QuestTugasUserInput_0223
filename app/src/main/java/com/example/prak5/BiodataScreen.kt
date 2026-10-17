@@ -119,5 +119,25 @@ fun BiodataScreen(
         daftarSkill
     )
 
-    
+    BoxWithConstraints(
+        modifier = modifier
+            .fillMaxSize()
+            .padding(innerPadding)
+            .background(latar)
+    ) {
+        val tinggiGambar = maxHeight *
+                stringResource(R.string.header_height_fraction).toFloat()
+
+        // Gambar header bagian atas.
+        Image(
+            painter = painterResource(R.drawable.header_biodata),
+            contentDescription = stringResource(R.string.biodata_title),
+            contentScale = ContentScale.Crop,
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(tinggiGambar)
+                .align(Alignment.TopCenter)
+        )
+
+        
 }
