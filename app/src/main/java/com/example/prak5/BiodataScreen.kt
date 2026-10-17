@@ -198,5 +198,21 @@ fun BiodataScreen(
                 horizontalArrangement = Arrangement.spacedBy(
                     dimensionResource(R.dimen.input_spacing)
                 )
-            ) 
+            ) {
+                InputBiodata(
+                    value = namaDepan,
+                    onValueChange = { namaDepan = it },
+                    label = stringResource(R.string.first_name),
+                    modifier = Modifier.weight(1f)
+                )
+
+                InputBiodata(
+                    value = namaBelakang,
+                    onValueChange = { namaBelakang = it },
+                    label = stringResource(R.string.last_name),
+                    modifier = Modifier.weight(1f)
+                )
+            }
+
+            
 }
