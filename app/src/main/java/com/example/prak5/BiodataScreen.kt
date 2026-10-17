@@ -465,5 +465,36 @@ fun BiodataScreen(
     }
 }
 
+@Composable
+private fun InputBiodata(
+    value: String,
+    onValueChange: (String) -> Unit,
+    label: String,
+    modifier: Modifier = Modifier,
+    keyboard: KeyboardType = KeyboardType.Text
+) {
+    OutlinedTextField(
+        value = value,
+        onValueChange = onValueChange,
+        placeholder = { Text(label) },
+        singleLine = true,
+        keyboardOptions = KeyboardOptions(
+            keyboardType = keyboard
+        ),
+        modifier = modifier,
+        shape = RoundedCornerShape(
+            dimensionResource(R.dimen.input_corner)
+        ),
+        colors = OutlinedTextFieldDefaults.colors(
+            focusedBorderColor = colorResource(
+                R.color.biodata_purple
+            ),
+            unfocusedBorderColor = colorResource(
+                R.color.biodata_input_border
+            )
+        )
+    )
+}
+
 
 }
