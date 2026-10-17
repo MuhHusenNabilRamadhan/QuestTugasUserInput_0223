@@ -496,5 +496,34 @@ private fun InputBiodata(
     )
 }
 
+@Composable
+private fun ItemSkill(
+    label: String,
+    checked: Boolean,
+    onCheckedChange: (Boolean) -> Unit
+) {
+    Row(
+        verticalAlignment = Alignment.CenterVertically,
+        modifier = Modifier.clickable {
+            onCheckedChange(!checked)
+        }
+    ) {
+        Checkbox(
+            checked = checked,
+            onCheckedChange = onCheckedChange,
+            modifier = Modifier.size(
+                dimensionResource(R.dimen.checkbox_size)
+            )
+        )
 
+        Spacer(Modifier.width(4.dp))
+
+        Text(
+            text = label,
+            fontSize = dimensionResource(
+                R.dimen.skill_text_size
+            ).value.sp,
+            color = colorResource(R.color.biodata_text)
+        )
+    }
 }
