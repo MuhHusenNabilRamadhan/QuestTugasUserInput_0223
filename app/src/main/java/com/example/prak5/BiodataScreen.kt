@@ -81,5 +81,9 @@ fun BiodataScreen(
     val latar = colorResource(R.color.biodata_background)
     val nonaktif = colorResource(R.color.biodata_disabled)
 
-    
+    // Ambil teks dari resources sebelum masuk ke callback.
+    val pesanEmail = stringResource(R.string.error_email)
+    val pesanRequired = stringResource(R.string.error_required)
+    val judulHasil = stringResource(R.string.result_title)
+
 }
